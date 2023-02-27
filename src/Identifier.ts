@@ -1,1 +1,1 @@
-export const SaveServiceID = Symbol.for("SaveService");
+export const SaveManagerName = Symbol.for("SaveManagerName");

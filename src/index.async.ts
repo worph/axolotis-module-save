@@ -1,6 +1,6 @@
 import {AxModuleAsync} from "axolotis-module-definition";
 import {AsyncContainerModule, interfaces} from "inversify";
-import {SaveServiceID} from "./Identifier";
+import {SaveManagerName} from "./Identifier";
 import {SaveManager} from "./services/save/SaveManager";
 
 export * from "./Identifier";
@@ -8,7 +8,7 @@ export * from "./Identifier";
 export class AxSaveModule implements AxModuleAsync{
     getModule(): AsyncContainerModule {
         return new AsyncContainerModule(async (bind: interfaces.Bind) => {
-            bind(SaveServiceID).to(SaveManager).inSingletonScope();
+            bind(SaveManagerName).to(SaveManager).inSingletonScope();
 
         });
     }

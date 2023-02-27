@@ -6654,7 +6654,7 @@ var require_localforage = __commonJS({
 var import_inversify4 = __toESM(require_inversify(), 1);
 
 // src/Identifier.ts
-var SaveServiceID = Symbol.for("SaveService");
+var SaveManagerName = Symbol.for("SaveManagerName");
 
 // src/services/save/SaveManager.ts
 var import_file_saver = __toESM(require_FileSaver_min(), 1);
@@ -10970,124 +10970,7 @@ var require_inversify2 = __commonJS2({
   }
 });
 var import_inversify = __toESM2(require_inversify2(), 1);
-var DefaultSerializer = class {
-  specialListException = [
-    ArrayBuffer,
-    Int8Array,
-    Uint8Array,
-    Uint8ClampedArray,
-    Int16Array,
-    Uint16Array,
-    Int32Array,
-    Uint32Array,
-    Float32Array,
-    Float64Array,
-    BigInt64Array,
-    BigUint64Array
-  ];
-  deserialize(data, reviver) {
-    if (data === void 0)
-      return void 0;
-    if (data === null)
-      return null;
-    if (typeof data === "string" || typeof data === "number" || typeof data === "boolean") {
-      return data;
-    }
-    for (const specialListExceptionElement of this.specialListException) {
-      if (data instanceof Object && data instanceof specialListExceptionElement) {
-        return data;
-      }
-    }
-    if (data["serializeID"]) {
-      throw new Error();
-    }
-    if (data instanceof Array) {
-      for (let i = 0; i < data.length; i++) {
-        data[i] = reviver(data[i]);
-      }
-      return data;
-    } else if (data instanceof Object) {
-      let ret = {};
-      for (const dataKey in data) {
-        ret[dataKey] = reviver(data[dataKey]);
-      }
-      return ret;
-    } else {
-      return data;
-    }
-  }
-  serialize(data, replacer) {
-    if (data === void 0)
-      return void 0;
-    if (data === null)
-      return null;
-    if (typeof data === "string" || typeof data === "number" || typeof data === "boolean") {
-      return data;
-    }
-    for (const specialListExceptionElement of this.specialListException) {
-      if (data instanceof Object && data instanceof specialListExceptionElement) {
-        return data;
-      }
-    }
-    if (data["serializeID"]) {
-      throw new Error();
-    }
-    if (data instanceof Array) {
-      for (let i = 0; i < data.length; i++) {
-        data[i] = replacer(data[i]);
-      }
-      return data;
-    } else if (data instanceof Object) {
-      let ret = {};
-      for (const dataKey in data) {
-        ret[dataKey] = replacer(data[dataKey]);
-      }
-      return ret;
-    } else {
-      return JSON.parse(JSON.stringify(data));
-    }
-  }
-  getSerializeID() {
-    return null;
-  }
-};
-var SerializerEngine = class {
-  seriList = {};
-  defaultSeri = new DefaultSerializer();
-  registerDataType(objSerializer) {
-    this.seriList[objSerializer.getSerializeID()] = objSerializer;
-  }
-  reviver = (subobj) => {
-    return this.deserialize(subobj);
-  };
-  replacer = (subobj) => {
-    return this.serialise(subobj);
-  };
-  serializeToString(obj) {
-    return JSON.stringify(this.serialise(obj));
-  }
-  deserializeFromString(obj) {
-    return this.deserialize(JSON.parse(obj));
-  }
-  serialise(obj) {
-    let seri = this.defaultSeri;
-    if (obj && (obj.serializeID && this.seriList[obj.serializeID])) {
-      seri = this.seriList[obj.serializeID];
-    }
-    return seri.serialize(obj, this.replacer);
-  }
-  deserialize(data) {
-    let seri = this.defaultSeri;
-    if (data && (data.serializeID && this.seriList[data.serializeID])) {
-      seri = this.seriList[data.serializeID];
-    }
-    return seri.deserialize(data, this.reviver);
-  }
-  getType() {
-    return SerializerEngine.name;
-  }
-};
-var SerializerId = Symbol.for("Serializer");
+var SerializerEngineName = Symbol.for("SerializerEngineName");
 
 // src/services/save/LocalForageSave.ts
 var localforage = __toESM(require_localforage(), 1);
@@ -15426,7 +15309,7 @@ var require_inversify3 = __commonJS3({
   }
 });
 var import_inversify2 = __toESM3(require_inversify3(), 1);
-var IdServiceID = Symbol.for("IdServiceID");
+var IdServiceName = Symbol.for("IdServiceName");
 function makeid(length) {
   let result = "";
   let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -15447,9 +15330,6 @@ var SaveManager = class {
   }
   dataToSave = [];
   saveApi = new LocalForageSave();
-  getType() {
-    return SaveManager.name;
-  }
   registerSerializable(key, data) {
     if (!data)
       throw new Error();
@@ -15555,23 +15435,21 @@ var SaveManager = class {
 };
 SaveManager = __decorateClass([
   (0, import_inversify3.injectable)(),
-  __decorateParam(0, (0, import_inversify3.inject)(SerializerEngine.name))
+  __decorateParam(0, (0, import_inversify3.inject)(SerializerEngineName))
 ], SaveManager);
 
 // src/index.ts
 var AxSaveModule = class {
   getModule() {
-    console.log("AxBasicModule installed 2");
     return new import_inversify4.ContainerModule((bind) => {
-      bind(SaveManager.name).to(SaveManager).inSingletonScope();
-      bind(SaveServiceID).to(SaveManager).inSingletonScope();
+      bind(SaveManagerName).to(SaveManager).inSingletonScope();
     });
   }
 };
 export {
   AxSaveModule,
   SaveManager,
-  SaveServiceID
+  SaveManagerName
 };
 /*!
     localForage -- Offline Storage, Improved

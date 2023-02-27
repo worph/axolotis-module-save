@@ -1,5 +1,5 @@
 import {saveAs} from 'file-saver';
-import {SerializerEngine} from "@aptero/axolotis-module-serializer";
+import {SerializerEngine, SerializerEngineName} from "@aptero/axolotis-module-serializer";
 import {SerializableType} from "@aptero/axolotis-module-serializer";
 import {SaveAbstractionLevel} from "./SaveAbstractionLevel";
 import {LocalForageSave} from "./LocalForageSave";
@@ -35,11 +35,7 @@ export class SaveManager {
     dataToSave: { key: string, data: Savable<any> }[] = [];
     saveApi: SaveAbstractionLevel = new LocalForageSave();
 
-    getType(): string {
-        return SaveManager.name;
-    }
-
-    constructor(@inject(SerializerEngine.name) private serializeEngine: SerializerEngine) {
+    constructor(@inject(SerializerEngineName) private serializeEngine: SerializerEngine) {
     }
 
     registerSerializable(key: string, data: Savable<any>) {

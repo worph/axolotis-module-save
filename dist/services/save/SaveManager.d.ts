@@ -26,7 +26,6 @@ export declare class SaveManager {
         data: Savable<any>;
     }[];
     saveApi: SaveAbstractionLevel;
-    getType(): string;
     constructor(serializeEngine: SerializerEngine);
     registerSerializable(key: string, data: Savable<any>): void;
     isCreateNew(): Promise<boolean>;

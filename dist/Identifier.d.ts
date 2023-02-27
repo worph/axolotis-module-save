@@ -1,2 +1,2 @@
-export declare const SaveServiceID: unique symbol;
+export declare const SaveManagerName: unique symbol;
 //# sourceMappingURL=Identifier.d.ts.map
