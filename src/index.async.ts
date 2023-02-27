@@ -5,7 +5,7 @@ import {SaveManager} from "./services/save/SaveManager";
 
 export * from "./Identifier";
 
-export class AxBasicModule implements AxModuleAsync{
+export class AxSaveModule implements AxModuleAsync{
     getModule(): AsyncContainerModule {
         return new AsyncContainerModule(async (bind: interfaces.Bind) => {
             bind(SaveServiceID).to(SaveManager).inSingletonScope();

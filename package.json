@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@aptero/axolotis-module-id-generator": "*",
-    "@aptero/axolotis-module-serializer": "https://github.com/worph/axolotis-module-serializer.git",
+    "@aptero/axolotis-module-serializer": "*",
     "axolotis-module-definition": "https://github.com/worph/axolotis-module-definition.git",
     "file-saver": "^2.0.5",
     "inversify": "^6.0.1",

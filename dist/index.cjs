@@ -6651,7 +6651,7 @@ var require_localforage = __commonJS({
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
-  AxBasicModule: () => AxBasicModule,
+  AxSaveModule: () => AxSaveModule,
   SaveManager: () => SaveManager,
   SaveServiceID: () => SaveServiceID
 });
@@ -6664,7 +6664,7 @@ var SaveServiceID = Symbol.for("SaveService");
 // src/services/save/SaveManager.ts
 var import_file_saver = __toESM(require_FileSaver_min(), 1);
 
-// node_modules/@aptero/axolotis-module-serializer/dist/index.mjs
+// ../axolotis-module-serializer/dist/index.mjs
 var __create2 = Object.create;
 var __defProp2 = Object.defineProperty;
 var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
@@ -6687,7 +6687,7 @@ var __toESM2 = (mod, isNodeMode, target) => (target = mod != null ? __create2(__
   mod
 ));
 var require_metadata_keys2 = __commonJS2({
-  "node_modules/inversify/lib/constants/metadata_keys.js"(exports) {
+  "../../node_modules/inversify/lib/constants/metadata_keys.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.NON_CUSTOM_TAG_KEYS = exports.PRE_DESTROY = exports.POST_CONSTRUCT = exports.DESIGN_PARAM_TYPES = exports.PARAM_TYPES = exports.TAGGED_PROP = exports.TAGGED = exports.MULTI_INJECT_TAG = exports.INJECT_TAG = exports.OPTIONAL_TAG = exports.UNMANAGED_TAG = exports.NAME_TAG = exports.NAMED_TAG = void 0;
@@ -6717,7 +6717,7 @@ var require_metadata_keys2 = __commonJS2({
   }
 });
 var require_literal_types2 = __commonJS2({
-  "node_modules/inversify/lib/constants/literal_types.js"(exports) {
+  "../../node_modules/inversify/lib/constants/literal_types.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.TargetTypeEnum = exports.BindingTypeEnum = exports.BindingScopeEnum = void 0;
@@ -6747,7 +6747,7 @@ var require_literal_types2 = __commonJS2({
   }
 });
 var require_id2 = __commonJS2({
-  "node_modules/inversify/lib/utils/id.js"(exports) {
+  "../../node_modules/inversify/lib/utils/id.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.id = void 0;
@@ -6759,7 +6759,7 @@ var require_id2 = __commonJS2({
   }
 });
 var require_binding2 = __commonJS2({
-  "node_modules/inversify/lib/bindings/binding.js"(exports) {
+  "../../node_modules/inversify/lib/bindings/binding.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.Binding = void 0;
@@ -6804,7 +6804,7 @@ var require_binding2 = __commonJS2({
   }
 });
 var require_error_msgs2 = __commonJS2({
-  "node_modules/inversify/lib/constants/error_msgs.js"(exports) {
+  "../../node_modules/inversify/lib/constants/error_msgs.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.STACK_OVERFLOW = exports.CIRCULAR_DEPENDENCY_IN_FACTORY = exports.ON_DEACTIVATION_ERROR = exports.PRE_DESTROY_ERROR = exports.POST_CONSTRUCT_ERROR = exports.ASYNC_UNBIND_REQUIRED = exports.MULTIPLE_POST_CONSTRUCT_METHODS = exports.MULTIPLE_PRE_DESTROY_METHODS = exports.CONTAINER_OPTIONS_INVALID_SKIP_BASE_CHECK = exports.CONTAINER_OPTIONS_INVALID_AUTO_BIND_INJECTABLE = exports.CONTAINER_OPTIONS_INVALID_DEFAULT_SCOPE = exports.CONTAINER_OPTIONS_MUST_BE_AN_OBJECT = exports.ARGUMENTS_LENGTH_MISMATCH = exports.INVALID_DECORATOR_OPERATION = exports.INVALID_TO_SELF_VALUE = exports.LAZY_IN_SYNC = exports.INVALID_FUNCTION_BINDING = exports.INVALID_MIDDLEWARE_RETURN = exports.NO_MORE_SNAPSHOTS_AVAILABLE = exports.INVALID_BINDING_TYPE = exports.NOT_IMPLEMENTED = exports.CIRCULAR_DEPENDENCY = exports.UNDEFINED_INJECT_ANNOTATION = exports.MISSING_INJECT_ANNOTATION = exports.MISSING_INJECTABLE_ANNOTATION = exports.NOT_REGISTERED = exports.CANNOT_UNBIND = exports.AMBIGUOUS_MATCH = exports.KEY_NOT_FOUND = exports.NULL_ARGUMENT = exports.DUPLICATED_METADATA = exports.DUPLICATED_INJECTABLE_DECORATOR = void 0;
@@ -6868,7 +6868,7 @@ var require_error_msgs2 = __commonJS2({
   }
 });
 var require_metadata_reader2 = __commonJS2({
-  "node_modules/inversify/lib/planning/metadata_reader.js"(exports) {
+  "../../node_modules/inversify/lib/planning/metadata_reader.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -6922,7 +6922,7 @@ var require_metadata_reader2 = __commonJS2({
   }
 });
 var require_binding_count2 = __commonJS2({
-  "node_modules/inversify/lib/bindings/binding_count.js"(exports) {
+  "../../node_modules/inversify/lib/bindings/binding_count.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.BindingCount = void 0;
@@ -6935,7 +6935,7 @@ var require_binding_count2 = __commonJS2({
   }
 });
 var require_exceptions2 = __commonJS2({
-  "node_modules/inversify/lib/utils/exceptions.js"(exports) {
+  "../../node_modules/inversify/lib/utils/exceptions.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -6986,7 +6986,7 @@ var require_exceptions2 = __commonJS2({
   }
 });
 var require_serialization2 = __commonJS2({
-  "node_modules/inversify/lib/utils/serialization.js"(exports) {
+  "../../node_modules/inversify/lib/utils/serialization.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -7121,7 +7121,7 @@ var require_serialization2 = __commonJS2({
   }
 });
 var require_context2 = __commonJS2({
-  "node_modules/inversify/lib/planning/context.js"(exports) {
+  "../../node_modules/inversify/lib/planning/context.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.Context = void 0;
@@ -7143,7 +7143,7 @@ var require_context2 = __commonJS2({
   }
 });
 var require_metadata2 = __commonJS2({
-  "node_modules/inversify/lib/planning/metadata.js"(exports) {
+  "../../node_modules/inversify/lib/planning/metadata.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -7194,7 +7194,7 @@ var require_metadata2 = __commonJS2({
   }
 });
 var require_plan2 = __commonJS2({
-  "node_modules/inversify/lib/planning/plan.js"(exports) {
+  "../../node_modules/inversify/lib/planning/plan.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.Plan = void 0;
@@ -7209,7 +7209,7 @@ var require_plan2 = __commonJS2({
   }
 });
 var require_lazy_service_identifier2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/lazy_service_identifier.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/lazy_service_identifier.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.LazyServiceIdentifer = void 0;
@@ -7226,7 +7226,7 @@ var require_lazy_service_identifier2 = __commonJS2({
   }
 });
 var require_queryable_string2 = __commonJS2({
-  "node_modules/inversify/lib/planning/queryable_string.js"(exports) {
+  "../../node_modules/inversify/lib/planning/queryable_string.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.QueryableString = void 0;
@@ -7258,7 +7258,7 @@ var require_queryable_string2 = __commonJS2({
   }
 });
 var require_target2 = __commonJS2({
-  "node_modules/inversify/lib/planning/target.js"(exports) {
+  "../../node_modules/inversify/lib/planning/target.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -7382,7 +7382,7 @@ var require_target2 = __commonJS2({
   }
 });
 var require_reflection_utils2 = __commonJS2({
-  "node_modules/inversify/lib/planning/reflection_utils.js"(exports) {
+  "../../node_modules/inversify/lib/planning/reflection_utils.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -7560,7 +7560,7 @@ var require_reflection_utils2 = __commonJS2({
   }
 });
 var require_request2 = __commonJS2({
-  "node_modules/inversify/lib/planning/request.js"(exports) {
+  "../../node_modules/inversify/lib/planning/request.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.Request = void 0;
@@ -7587,7 +7587,7 @@ var require_request2 = __commonJS2({
   }
 });
 var require_planner2 = __commonJS2({
-  "node_modules/inversify/lib/planning/planner.js"(exports) {
+  "../../node_modules/inversify/lib/planning/planner.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -7763,7 +7763,7 @@ var require_planner2 = __commonJS2({
   }
 });
 var require_async2 = __commonJS2({
-  "node_modules/inversify/lib/utils/async.js"(exports) {
+  "../../node_modules/inversify/lib/utils/async.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.isPromiseOrContainsPromise = exports.isPromise = void 0;
@@ -7782,7 +7782,7 @@ var require_async2 = __commonJS2({
   }
 });
 var require_scope2 = __commonJS2({
-  "node_modules/inversify/lib/scope/scope.js"(exports) {
+  "../../node_modules/inversify/lib/scope/scope.js"(exports) {
     "use strict";
     var __awaiter = exports && exports.__awaiter || function(thisArg, _arguments, P, generator) {
       function adopt(value) {
@@ -7948,7 +7948,7 @@ var require_scope2 = __commonJS2({
   }
 });
 var require_factory_type2 = __commonJS2({
-  "node_modules/inversify/lib/utils/factory_type.js"(exports) {
+  "../../node_modules/inversify/lib/utils/factory_type.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.FactoryType = void 0;
@@ -7961,7 +7961,7 @@ var require_factory_type2 = __commonJS2({
   }
 });
 var require_binding_utils2 = __commonJS2({
-  "node_modules/inversify/lib/utils/binding_utils.js"(exports) {
+  "../../node_modules/inversify/lib/utils/binding_utils.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -8054,7 +8054,7 @@ var require_binding_utils2 = __commonJS2({
   }
 });
 var require_instantiation2 = __commonJS2({
-  "node_modules/inversify/lib/resolution/instantiation.js"(exports) {
+  "../../node_modules/inversify/lib/resolution/instantiation.js"(exports) {
     "use strict";
     var __assign = exports && exports.__assign || function() {
       __assign = Object.assign || function(t) {
@@ -8341,7 +8341,7 @@ var require_instantiation2 = __commonJS2({
   }
 });
 var require_resolver2 = __commonJS2({
-  "node_modules/inversify/lib/resolution/resolver.js"(exports) {
+  "../../node_modules/inversify/lib/resolution/resolver.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -8651,7 +8651,7 @@ var require_resolver2 = __commonJS2({
   }
 });
 var require_constraint_helpers2 = __commonJS2({
-  "node_modules/inversify/lib/syntax/constraint_helpers.js"(exports) {
+  "../../node_modules/inversify/lib/syntax/constraint_helpers.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -8726,7 +8726,7 @@ var require_constraint_helpers2 = __commonJS2({
   }
 });
 var require_binding_when_syntax2 = __commonJS2({
-  "node_modules/inversify/lib/syntax/binding_when_syntax.js"(exports) {
+  "../../node_modules/inversify/lib/syntax/binding_when_syntax.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.BindingWhenSyntax = void 0;
@@ -8830,7 +8830,7 @@ var require_binding_when_syntax2 = __commonJS2({
   }
 });
 var require_binding_on_syntax2 = __commonJS2({
-  "node_modules/inversify/lib/syntax/binding_on_syntax.js"(exports) {
+  "../../node_modules/inversify/lib/syntax/binding_on_syntax.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.BindingOnSyntax = void 0;
@@ -8853,7 +8853,7 @@ var require_binding_on_syntax2 = __commonJS2({
   }
 });
 var require_binding_when_on_syntax2 = __commonJS2({
-  "node_modules/inversify/lib/syntax/binding_when_on_syntax.js"(exports) {
+  "../../node_modules/inversify/lib/syntax/binding_when_on_syntax.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.BindingWhenOnSyntax = void 0;
@@ -8922,7 +8922,7 @@ var require_binding_when_on_syntax2 = __commonJS2({
   }
 });
 var require_binding_in_syntax2 = __commonJS2({
-  "node_modules/inversify/lib/syntax/binding_in_syntax.js"(exports) {
+  "../../node_modules/inversify/lib/syntax/binding_in_syntax.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.BindingInSyntax = void 0;
@@ -8950,7 +8950,7 @@ var require_binding_in_syntax2 = __commonJS2({
   }
 });
 var require_binding_in_when_on_syntax2 = __commonJS2({
-  "node_modules/inversify/lib/syntax/binding_in_when_on_syntax.js"(exports) {
+  "../../node_modules/inversify/lib/syntax/binding_in_when_on_syntax.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.BindingInWhenOnSyntax = void 0;
@@ -9030,7 +9030,7 @@ var require_binding_in_when_on_syntax2 = __commonJS2({
   }
 });
 var require_binding_to_syntax2 = __commonJS2({
-  "node_modules/inversify/lib/syntax/binding_to_syntax.js"(exports) {
+  "../../node_modules/inversify/lib/syntax/binding_to_syntax.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -9155,7 +9155,7 @@ var require_binding_to_syntax2 = __commonJS2({
   }
 });
 var require_container_snapshot2 = __commonJS2({
-  "node_modules/inversify/lib/container/container_snapshot.js"(exports) {
+  "../../node_modules/inversify/lib/container/container_snapshot.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.ContainerSnapshot = void 0;
@@ -9177,7 +9177,7 @@ var require_container_snapshot2 = __commonJS2({
   }
 });
 var require_clonable2 = __commonJS2({
-  "node_modules/inversify/lib/utils/clonable.js"(exports) {
+  "../../node_modules/inversify/lib/utils/clonable.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.isClonable = void 0;
@@ -9188,7 +9188,7 @@ var require_clonable2 = __commonJS2({
   }
 });
 var require_lookup2 = __commonJS2({
-  "node_modules/inversify/lib/container/lookup.js"(exports) {
+  "../../node_modules/inversify/lib/container/lookup.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -9327,7 +9327,7 @@ var require_lookup2 = __commonJS2({
   }
 });
 var require_module_activation_store2 = __commonJS2({
-  "node_modules/inversify/lib/container/module_activation_store.js"(exports) {
+  "../../node_modules/inversify/lib/container/module_activation_store.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.ModuleActivationStore = void 0;
@@ -9381,7 +9381,7 @@ var require_module_activation_store2 = __commonJS2({
   }
 });
 var require_container2 = __commonJS2({
-  "node_modules/inversify/lib/container/container.js"(exports) {
+  "../../node_modules/inversify/lib/container/container.js"(exports) {
     "use strict";
     var __assign = exports && exports.__assign || function() {
       __assign = Object.assign || function(t) {
@@ -10214,7 +10214,7 @@ var require_container2 = __commonJS2({
   }
 });
 var require_container_module2 = __commonJS2({
-  "node_modules/inversify/lib/container/container_module.js"(exports) {
+  "../../node_modules/inversify/lib/container/container_module.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.AsyncContainerModule = exports.ContainerModule = void 0;
@@ -10238,7 +10238,7 @@ var require_container_module2 = __commonJS2({
   }
 });
 var require_js2 = __commonJS2({
-  "node_modules/inversify/lib/utils/js.js"(exports) {
+  "../../node_modules/inversify/lib/utils/js.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.getFirstArrayDuplicate = void 0;
@@ -10258,7 +10258,7 @@ var require_js2 = __commonJS2({
   }
 });
 var require_decorator_utils2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/decorator_utils.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/decorator_utils.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -10385,7 +10385,7 @@ var require_decorator_utils2 = __commonJS2({
   }
 });
 var require_injectable2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/injectable.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/injectable.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -10433,7 +10433,7 @@ var require_injectable2 = __commonJS2({
   }
 });
 var require_tagged2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/tagged.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/tagged.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.tagged = void 0;
@@ -10446,7 +10446,7 @@ var require_tagged2 = __commonJS2({
   }
 });
 var require_named2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/named.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/named.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -10488,7 +10488,7 @@ var require_named2 = __commonJS2({
   }
 });
 var require_inject_base2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/inject_base.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/inject_base.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.injectBase = void 0;
@@ -10510,7 +10510,7 @@ var require_inject_base2 = __commonJS2({
   }
 });
 var require_inject2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/inject.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/inject.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -10549,7 +10549,7 @@ var require_inject2 = __commonJS2({
   }
 });
 var require_optional2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/optional.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/optional.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -10591,7 +10591,7 @@ var require_optional2 = __commonJS2({
   }
 });
 var require_unmanaged2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/unmanaged.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/unmanaged.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -10636,7 +10636,7 @@ var require_unmanaged2 = __commonJS2({
   }
 });
 var require_multi_inject2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/multi_inject.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/multi_inject.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -10675,7 +10675,7 @@ var require_multi_inject2 = __commonJS2({
   }
 });
 var require_target_name2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/target_name.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/target_name.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -10720,7 +10720,7 @@ var require_target_name2 = __commonJS2({
   }
 });
 var require_property_event_decorator2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/property_event_decorator.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/property_event_decorator.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.propertyEventDecorator = void 0;
@@ -10740,7 +10740,7 @@ var require_property_event_decorator2 = __commonJS2({
   }
 });
 var require_post_construct2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/post_construct.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/post_construct.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -10780,7 +10780,7 @@ var require_post_construct2 = __commonJS2({
   }
 });
 var require_pre_destroy2 = __commonJS2({
-  "node_modules/inversify/lib/annotation/pre_destroy.js"(exports) {
+  "../../node_modules/inversify/lib/annotation/pre_destroy.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -10820,7 +10820,7 @@ var require_pre_destroy2 = __commonJS2({
   }
 });
 var require_interfaces2 = __commonJS2({
-  "node_modules/inversify/lib/interfaces/interfaces.js"(exports) {
+  "../../node_modules/inversify/lib/interfaces/interfaces.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.interfaces = void 0;
@@ -10832,7 +10832,7 @@ var require_interfaces2 = __commonJS2({
   }
 });
 var require_inversify2 = __commonJS2({
-  "node_modules/inversify/lib/inversify.js"(exports) {
+  "../../node_modules/inversify/lib/inversify.js"(exports) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -15564,7 +15564,7 @@ SaveManager = __decorateClass([
 ], SaveManager);
 
 // src/index.ts
-var AxBasicModule = class {
+var AxSaveModule = class {
   getModule() {
     console.log("AxBasicModule installed 2");
     return new import_inversify4.ContainerModule((bind) => {
@@ -15575,7 +15575,7 @@ var AxBasicModule = class {
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  AxBasicModule,
+  AxSaveModule,
   SaveManager,
   SaveServiceID
 });

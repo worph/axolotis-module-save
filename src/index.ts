@@ -7,7 +7,7 @@ export * from "./services/save/SaveManager";
 
 export * from "./Identifier";
 
-export class AxBasicModule implements AxModule{
+export class AxSaveModule implements AxModule{
     getModule(): ContainerModule {
         console.log("AxBasicModule installed 2");
         return new ContainerModule((bind: interfaces.Bind) => {
