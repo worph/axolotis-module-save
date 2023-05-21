@@ -15335,7 +15335,7 @@ var SaveManager = class {
   }
   dataToSave = [];
   saveApi = new LocalForageSave();
-  registerSerializable(key, data) {
+  registerSavable(key, data) {
     if (!data)
       throw new Error();
     this.dataToSave.push({ key, data });

@@ -38,7 +38,7 @@ export class SaveManager {
     constructor(@inject(SerializerEngineName) private serializeEngine: SerializerEngine) {
     }
 
-    registerSerializable(key: string, data: Savable<any>) {
+    registerSavable(key: string, data: Savable<any>) {
         if (!data) throw new Error();
         this.dataToSave.push({key, data});
     }

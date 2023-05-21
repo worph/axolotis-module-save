@@ -27,7 +27,7 @@ export declare class SaveManager {
     }[];
     saveApi: SaveAbstractionLevel;
     constructor(serializeEngine: SerializerEngine);
-    registerSerializable(key: string, data: Savable<any>): void;
+    registerSavable(key: string, data: Savable<any>): void;
     isCreateNew(): Promise<boolean>;
     saveAsFile(id: string): Promise<void>;
     loadAsFile(): void;
