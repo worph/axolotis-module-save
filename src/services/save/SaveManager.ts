@@ -18,7 +18,7 @@ export interface Savable<T> {
     load(json: T): void,
 }
 
-export interface SaveStructure extends SerializableType {
+export interface SaveStructure {
     id: string;
     version: string,
     name: string,
@@ -83,7 +83,6 @@ export class SaveManager {
             id = makeid(10);
             save = {
                 version: LATEST_VERSION,
-                serializeID: null,
                 name,
                 id,
                 date: new Date().toISOString(),
@@ -94,7 +93,6 @@ export class SaveManager {
             const previous = JSON.parse(await this.saveApi.getItem(SAVE_PREFIX + id));
             save = {
                 version: LATEST_VERSION,
-                serializeID: null,
                 name: previous.name,
                 id,
                 date: new Date().toISOString(),

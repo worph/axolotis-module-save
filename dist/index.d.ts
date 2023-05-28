@@ -1,6 +1,6 @@
 import { AxModule } from 'axolotis-module-definition';
 import { ContainerModule } from 'inversify';
-import { SerializableType, SerializerEngine } from '@aptero/axolotis-module-serializer';
+import { SerializerEngine } from '@aptero/axolotis-module-serializer';
 
 interface SaveAbstractionLevel {
     getItem(key: string): Promise<string>;
@@ -18,7 +18,7 @@ interface Savable<T> {
     save(): T;
     load(json: T): void;
 }
-interface SaveStructure extends SerializableType {
+interface SaveStructure {
     id: string;
     version: string;
     name: string;
