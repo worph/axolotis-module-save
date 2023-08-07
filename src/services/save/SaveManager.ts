@@ -1,6 +1,5 @@
 import {saveAs} from 'file-saver';
 import {SerializerEngine, SerializerEngineName} from "@aptero/axolotis-module-serializer";
-import {SerializableType} from "@aptero/axolotis-module-serializer";
 import {SaveAbstractionLevel} from "./SaveAbstractionLevel";
 import {LocalForageSave} from "./LocalForageSave";
 import {inject, injectable} from "inversify";
@@ -56,10 +55,34 @@ export class SaveManager {
         saveAs(blob, json.name + ".json");
     }
 
-    loadAsFile() {
-        //TODO
-        throw new Error("unimplemented")
+    /**
+     * Returns the save id (to be loaded) must call load(id: string) to load this save
+     * @param file
+     */
+    async loadFromFile(file: File):Promise<string> {
+        let text = await new Promise<string>(resolve => {
+            const reader = new FileReader();
+            reader.onload = function (evt) {
+                resolve(evt.target.result as string);
+            }
+            reader.readAsText(file, "UTF-8");
+        });
+        return this.loadFromString(text);
     }
+
+    /**
+     * Returns the save id (to be loaded)
+     * @param data
+     */
+    async loadFromString(data: string): Promise<string> {
+        // Generate a unique ID for this save
+        const id = makeid(10);
+        // Store the parsed save data
+        await this.saveApi.setItem(SAVE_PREFIX + id, data);
+        const string = this.serializeEngine.deserializeFromString(data);//format checker only
+        return id;
+    }
+
 
     async load(id: string) {
         await this.setLastSave(id);

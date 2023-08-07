@@ -38,7 +38,8 @@ declare class SaveManager {
     registerSavable(key: string, data: Savable<any>): void;
     isCreateNew(): Promise<boolean>;
     saveAsFile(id: string): Promise<void>;
-    loadAsFile(): void;
+    loadFromFile(file: File): Promise<string>;
+    loadFromString(data: string): Promise<string>;
     load(id: string): Promise<void>;
     save(id?: string, name?: string): Promise<string>;
     listSaves(): Promise<SaveMeta[]>;
