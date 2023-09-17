@@ -22,7 +22,7 @@ export interface SaveStructure {
     version: string,
     name: string,
     date: string,
-    zgame: { [id: string]: string }
+    zgame: Record<string, any>
 }
 
 const SAVE_PREFIX = "SAVE-";
@@ -37,6 +37,11 @@ export class SaveManager {
     constructor(@inject(SerializerEngineName) private serializeEngine: SerializerEngine) {
     }
 
+    /**
+     * Order matter the load will be done in the same order
+     * @param key
+     * @param data
+     */
     registerSavable(key: string, data: Savable<any>) {
         if (!data) throw new Error();
         this.dataToSave.push({key, data});
@@ -79,21 +84,22 @@ export class SaveManager {
         const id = makeid(10);
         // Store the parsed save data
         await this.saveApi.setItem(SAVE_PREFIX + id, data);
-        const string = this.serializeEngine.deserializeFromString(data);//format checker only
+        JSON.parse(data);//format checker only should be a json
         return id;
     }
 
 
     async load(id: string) {
         await this.setLastSave(id);
-        let item: SaveStructure = this.serializeEngine.deserializeFromString<SaveStructure>(await this.saveApi.getItem(SAVE_PREFIX + id));
+        const save = await this.saveApi.getItem(SAVE_PREFIX + id);
+        let item: SaveStructure = JSON.parse(save);
         if (item.version !== LATEST_VERSION) {
             throw new Error("Incompatibility between save version: " + item.version + "/" + LATEST_VERSION);
             //TODO implement version migrator
         }
         console.log("loading save : " + item.name + " / " + item.id);
         for (const data of this.dataToSave) {
-            let storedData = item.zgame[data.key];
+            let storedData = this.serializeEngine.deserialize(item.zgame[data.key]);
             data.data.load(storedData);
         }
     }
@@ -123,9 +129,9 @@ export class SaveManager {
             }
         }
         for (const data of this.dataToSave) {
-            save.zgame[data.key] = data.data.save();
+            save.zgame[data.key] = this.serializeEngine.serialize(data.data.save());
         }
-        await this.saveApi.setItem(SAVE_PREFIX + id, this.serializeEngine.serializeToString(save));
+        await this.saveApi.setItem(SAVE_PREFIX + id, JSON.stringify(save));
         return id;
     }
 

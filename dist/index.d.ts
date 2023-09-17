@@ -23,9 +23,7 @@ interface SaveStructure {
     version: string;
     name: string;
     date: string;
-    zgame: {
-        [id: string]: string;
-    };
+    zgame: Record<string, any>;
 }
 declare class SaveManager {
     private serializeEngine;
