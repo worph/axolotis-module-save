@@ -50,8 +50,24 @@ declare class SaveManager {
 
 declare const SaveManagerName: unique symbol;
 
+declare class LocalStorageSave implements SaveAbstractionLevel {
+    getItem(key: string): Promise<string>;
+    setItem(key: string, value: string): Promise<string>;
+    removeItem(key: string): Promise<void>;
+    keys(): Promise<string[]>;
+}
+
+declare class LocalForageSave implements SaveAbstractionLevel {
+    private localforage;
+    constructor();
+    getItem(key: string): Promise<string>;
+    setItem(key: string, value: string): Promise<string>;
+    removeItem(key: string): Promise<void>;
+    keys(): Promise<string[]>;
+}
+
 declare class AxSaveModule implements AxModule {
     getModule(): ContainerModule;
 }
 
-export { AxSaveModule, Savable, SaveManager, SaveManagerName, SaveMeta, SaveStructure };
+export { AxSaveModule, LocalForageSave, LocalStorageSave, Savable, SaveAbstractionLevel, SaveManager, SaveManagerName, SaveMeta, SaveStructure };

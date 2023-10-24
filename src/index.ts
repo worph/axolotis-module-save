@@ -7,6 +7,10 @@ export * from "./services/save/SaveManager";
 
 export * from "./Identifier";
 
+export * from "./services/save/LocalStorageSave";
+export * from "./services/save/LocalForageSave";
+export * from "./services/save/SaveAbstractionLevel";
+
 export class AxSaveModule implements AxModule{
     getModule(): ContainerModule {
         return new ContainerModule((bind: interfaces.Bind) => {
